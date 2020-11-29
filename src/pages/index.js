@@ -1,5 +1,9 @@
 import React from "react"
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return (
+    <button style={{ margin: "3em" }} onClick={() => alert("Play sound")}>
+      Bottle placeholder
+    </button>
+  )
 }
