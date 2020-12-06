@@ -1,18 +1,27 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { Box } from "theme-ui"
+import { Button, Flex, Box } from "theme-ui"
 
 const MarkdownTemplate = ({ data }) => {
   return (
     <>
-      <Box>
+      <Box p={3}>
         <Link to="/">← Back to the bottles of happiness</Link>
       </Box>
-      <article>
-        <div
-          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-        ></div>
-      </article>
+
+      <Box
+        sx={{
+          maxWidth: 512,
+          mx: "auto",
+          px: 2,
+        }}
+      >
+        <article>
+          <div
+            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+          ></div>
+        </article>
+      </Box>
     </>
   )
 }
