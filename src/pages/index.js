@@ -3,7 +3,7 @@ import { Button, Flex, Box } from "theme-ui"
 import useSound from 'use-sound'
 
 // record Lillian (5.5 🦄) and Liv (7) and add laugh1 in the sounds folder
-import laugh1 from '../../sounds/laugh1.mp3';
+import laugh1 from '../../sounds/g_is_for_grr.mp3';
 
 export default function Home() {
   const [play] = useSound(laugh1);
