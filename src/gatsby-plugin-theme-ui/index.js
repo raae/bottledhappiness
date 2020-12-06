@@ -1,4 +1,6 @@
 export default {
+  useBodyStyles: true,
+
   colors: {
     text: "#333333",
     background: "floralwhite",
@@ -10,6 +12,12 @@ export default {
     heading: '"Comic Sans MS", cursive, sans-serif',
   },
   styles: {
+    root: {
+      margin: 0,
+      fontSize: 20,
+      fontFamily: "body",
+      lineHeight: 1.5,
+    },
     h1: {
       fontSize: 32,
       fontFamily: "heading",
@@ -26,26 +34,17 @@ export default {
       mb: 0,
     },
     p: {
-      fontSize: 20,
-      fontFamily: "body",
       my: 3,
-      lineHeight: 1.5,
     },
     ul: {
-      fontSize: 20,
-      fontFamily: "body",
       my: 3,
-      lineHeight: 1.5,
     },
     iframe: {
       width: "100%",
     },
     a: {
       color: "primary",
-      fontSize: 20,
-      fontFamily: "body",
       my: 3,
-      lineHeight: 1.5,
     },
   },
 }

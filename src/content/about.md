@@ -4,6 +4,8 @@ This our entry for the [GatsbyJS #SillySiteChallenge](https://www.gatsbyjs.com/s
 
 It's a work in progress, but the idea is to bottle up kids laughter to spread some happiness at the end of 2020.
 
+All work is done in the open, check out the [GitHub repo](https://github.com/raae/bottledhappiness).
+
 ## Who are we?
 
 We are Lilly Labs, a family(web-shop).

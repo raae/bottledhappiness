@@ -11,6 +11,7 @@ const MarkdownTemplate = ({ data }) => {
         sx={{
           maxWidth: 512,
           mx: "auto",
+          py: 4,
           px: 2,
         }}
       >
