@@ -1,6 +1,7 @@
-import { Link } from "gatsby"
+/** @jsx jsx */
 import React from "react"
-import { Button, Flex, Box } from "theme-ui"
+import { Link } from "gatsby"
+import { Button, Flex, Box, jsx } from "theme-ui"
 
 export default function Home() {
   return (
@@ -22,9 +23,10 @@ export default function Home() {
           Bottle placeholder
         </Button>
       </Box>
-      <Box p={3}>
-        <Link to="about">About</Link>
-      </Box>
+
+      <Link sx={{ fontFamily: "body", p: 3, display: "block" }} to="about">
+        About
+      </Link>
     </Flex>
   )
 }

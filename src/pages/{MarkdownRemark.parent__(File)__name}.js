@@ -1,27 +1,39 @@
+/** @jsx jsx */
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { Button, Flex, Box } from "theme-ui"
+import { jsx, useThemeUI } from "theme-ui"
 
 const MarkdownTemplate = ({ data }) => {
+  const { theme } = useThemeUI()
   return (
     <>
-      <Box p={3}>
-        <Link to="/">← Back to the bottles of happiness</Link>
-      </Box>
-
-      <Box
+      <main
         sx={{
           maxWidth: 512,
           mx: "auto",
           px: 2,
         }}
       >
-        <article>
+        <Link
+          to="/"
+          sx={{
+            ...theme.styles.a,
+          }}
+        >
+          ← Back to the bottles of happiness
+        </Link>
+
+        <article
+          sx={{
+            my: 5,
+            ...theme.styles,
+          }}
+        >
           <div
             dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
           ></div>
         </article>
-      </Box>
+      </main>
     </>
   )
 }
