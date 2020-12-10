@@ -6,7 +6,20 @@ import useSound from 'use-sound'
 import laugh1 from '../../laughs/534709__artymarce__childlaugh.mp3'
 
 export default function Home() {
-  const [play, { stop }] = useSound(laugh1);
+  const [isChecked, setIsChecked] = React.useState(false);
+  // const [play, { stop }] = useSound(laugh1);
+  const [playActive] = useSound(
+    laugh1,
+    { volume: 0.33 }
+  );
+  const [playOn] = useSound(
+    laugh1,
+    { volume: 0.33 }
+  );
+  const [playOff] = useSound(
+    laugh1,
+    { volume: 0.33 }
+  );
   return (
     <Flex
       bg=""
@@ -20,7 +33,13 @@ export default function Home() {
     >
       <Box>
         <Button
-          onClick={play}
+          name="bottle-checkbox"
+          onChange={() => setIsChecked(!isChecked)}
+          onMouseDown={playActive}
+          onMouseUp={() => {
+            isChecked ? playOff() : playOn();
+          }}
+
           sx={{ height: "70vh", width: "clamp(30px, 30vw, 600px)" }}
         >
           Bottle placeholder
