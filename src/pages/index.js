@@ -2,11 +2,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Button, Flex, Box, jsx } from "theme-ui"
-import useSound from 'use-sound'
-import laugh1 from '../../laughs/534709__artymarce__childlaugh.mp3'
+import useSound from "use-sound"
+import laugh1 from "../../laughs/534709__artymarce__childlaugh.mp3"
+import Boop from "../components/Boop"
 
 export default function Home() {
-  const [play, { stop }] = useSound(laugh1);
+  const [play, { stop }] = useSound(laugh1)
   return (
     <Flex
       bg=""
@@ -19,12 +20,14 @@ export default function Home() {
       }}
     >
       <Box>
-        <Button
-          onClick={play}
-          sx={{ height: "70vh", width: "clamp(30px, 30vw, 600px)" }}
-        >
-          Bottle placeholder
-        </Button>
+        <Boop y={5}>
+          <Button
+            onClick={play}
+            sx={{ height: "70vh", width: "clamp(30px, 30vw, 600px)" }}
+          >
+            Bottle placeholder
+          </Button>
+        </Boop>
       </Box>
 
       <Link sx={{ fontFamily: "body", p: 3, display: "block" }} to="about">
