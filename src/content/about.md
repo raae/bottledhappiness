@@ -18,11 +18,17 @@ We work as independent contractors and indie hackers.
 
 Our current focus is [POW!](https://usepow.app) — the privacy-first menstrual cycle journal.
 
+Sign up for @raae's [weekly newsletter](https://lillylabs.ck.page/67d6b9ca5d) to be updated on our life as Indie Hackers including monthly POW! Status Updates.
+
 ## Follow the work
 
 All of Benedicte's work will be done [on stream](https://www.youtube.com/channel/UCDlrzlRdM1vGr8nO708KFmQ), while Ola, who is in charge of audio, will work off-screen, so will Lillian as well, who is in charge of illustrations.
 
-The stream are every Sunday at 10.00-12.00 (GMT+1)
+Last stream Sunday December 27th 10.00-12.00 (GMT+1):
+
+https://youtu.be/9k2IFKC2jjo
+
+https://youtu.be/dWThML_ErkQ
 
 https://youtu.be/gigaNsWQKVs
 
