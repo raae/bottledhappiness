@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { Button, Flex, Box, jsx } from "theme-ui"
 import useSound from "use-sound"
 import laugh1 from "../../laughs/534709__artymarce__childlaugh.mp3"
+import IllustrationSVG from "../assets/illustration.svg"
 import Boop from "../components/Boop"
 
 export default function Home() {
@@ -21,12 +22,10 @@ export default function Home() {
     >
       <Box>
         <Boop y={5}>
-          <Button
+          <IllustrationSVG
             onClick={play}
             sx={{ height: "70vh", width: "clamp(30px, 30vw, 600px)" }}
-          >
-            Bottle placeholder
-          </Button>
+          />
         </Boop>
       </Box>
 
