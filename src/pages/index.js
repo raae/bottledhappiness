@@ -11,6 +11,9 @@ export default function Home() {
   const [play] = useSound(laugh1)
   const [reverse, setReverse] = useState(false)
 
+
+  var ourTopChildrenLaughs = [play1, play2, play3]
+  // when you say "initiate a const", do you mean write a const? Or something more fancy?
   return (
     <Flex
       bg=""
