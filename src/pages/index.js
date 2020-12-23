@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { Flex, Box, jsx } from "theme-ui"
 import { Spring, config } from "react-spring/renderprops"
 import useSound from "use-sound"
-import laugh1 from "../../laughs/534709__artymarce__childlaugh.mp3"
+import laugh1 from "../assets/laughs/534709__artymarce__childlaugh.mp3"
 import IllustrationSVG from "../assets/illustration.svg"
 
 export default function Home() {
