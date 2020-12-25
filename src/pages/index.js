@@ -12,7 +12,23 @@ import laugh3 from "../assets/laughs/Laugh3LillianJUNE_30_2016_Trampolinelykke_p
 import IllustrationSVG from "../assets/illustration.svg"
 
 export default function Home() {
-  const [play] = useSound(laugh2)
+  const [play1] = useSound(laugh1)
+  const [play2] = useSound(laugh2)
+  const [play3] = useSound(laugh3)
+
+  const ourTopChildrenLaughs = [play1, play2, play3]
+
+
+
+
+  // Where should I put these? in onClick?
+  // What more must I do with these? A hint
+  // const random = Math.floor(Math.random() * 3)
+  // ourTopChildrenLaughs[random]()
+
+
+
+
   const [reverse, setReverse] = useState(false)
 
   return (
@@ -42,7 +58,7 @@ export default function Home() {
       >
         {props1 => (
           <IllustrationSVG
-            onClick={play}
+            onClick={play2}
             sx={{
               height: "90vh",
               width: "clamp(30px, 30vw, 600px)",
