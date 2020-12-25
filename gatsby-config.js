@@ -5,6 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `🍾 🤣 🍾`,
+  },
   /* Your site config here */
   plugins: [
     `gatsby-plugin-theme-ui`,
