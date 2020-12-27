@@ -1,12 +1,14 @@
 /** @jsx jsx */
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { Helmet } from "react-helmet"
 import { jsx, useThemeUI } from "theme-ui"
 
 const MarkdownTemplate = ({ data }) => {
   const { theme } = useThemeUI()
   return (
     <>
+      <Helmet title="🍾🤣🍾 - About" />
       <main
         sx={{
           maxWidth: 512,
