@@ -40,17 +40,44 @@ export default function Home() {
         onClick={laughingLillianOnClick}
         sx={{
           path: {
+            transform: "scale(1)",
+            transition: ".2s linear fill",
+            fill: "grey",
+            ":hover": {
+              fill: "orange",
+            },
             ":nth-child(3n)": {
               fill: "red",
+              ":hover": {
+                fill: "pink",
+              },
             },
             ":nth-child(4n)": {
               fill: "blue",
+              ":hover": {
+                fill: "red",
+              },
             },
             ":nth-child(5n)": {
               fill: "pink",
+              ":hover": {
+                fill: "yellow",
+              },
             },
             ":nth-child(8n)": {
               fill: "yellow",
+              ":hover": {
+                fill: "pink",
+              },
+            },
+            ":nth-child(3)": {
+              // Bottle
+              // fill: "green",
+              // transform: "scale(1)",
+              // transition: ".2s linear fill",
+              // ":hover": {
+              //   fill: "red",
+              // },
             },
           },
         }}
