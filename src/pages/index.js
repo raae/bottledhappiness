@@ -9,7 +9,6 @@ import laugh1 from "../assets/laughs/534709__artymarce__childlaugh.mp3"
 import laugh2 from "../assets/laughs/Laugh2LillianBenedicte2020.mp3"
 import laugh3 from "../assets/laughs/Laugh3LillianJUNE_30_2016_Trampolinelykke_paa_landet_hos_babywildelvs.mp3"
 
-
 import IllustrationSVG from "../assets/illustration.svg"
 
 export default function Home() {
@@ -17,33 +16,16 @@ export default function Home() {
   const [play2] = useSound(laugh2)
   const [play3] = useSound(laugh3)
 
-  const laughingLillianOnClick = (event) => {
+  const laughingLillianOnClick = event => {
     event.preventDefault()
     const ourTopChildrenLaughs = [play1, play2, play3]
     const random = Math.floor(Math.random() * 3)
     ourTopChildrenLaughs[random]()
-
-
-
   }
-
-
-
-
-
-
-  // Where should I put these? in onClick?
-  // What more must I do with these? A hint
-  // const random = Math.floor(Math.random() * 3)
-  // ourTopChildrenLaughs[random]()
-
-
-
 
   const [reverse, setReverse] = useState(false)
 
   return (
-
     <Flex
       bg=""
       sx={{
@@ -73,8 +55,6 @@ export default function Home() {
           <IllustrationSVG
             onClick={laughingLillianOnClick}
             sx={{
-              height: "90vh",
-              width: "clamp(30px, 30vw, 600px)",
               path: {
                 ":nth-child(3n)": {
                   fill: "red",
