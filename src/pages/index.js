@@ -16,7 +16,17 @@ export default function Home() {
   const [play2] = useSound(laugh2)
   const [play3] = useSound(laugh3)
 
-  const ourTopChildrenLaughs = [play1, play2, play3]
+  const laughingLillianOnClick = (event) => {
+    event.preventDefault()
+    const ourTopChildrenLaughs = [play1, play2, play3]
+    const random = Math.floor(Math.random() * 3)
+    ourTopChildrenLaughs[random]()
+
+
+
+  }
+
+
 
 
 
@@ -58,7 +68,7 @@ export default function Home() {
       >
         {props1 => (
           <IllustrationSVG
-            onClick={play2}
+            onClick={laughingLillianOnClick}
             sx={{
               height: "90vh",
               width: "clamp(30px, 30vw, 600px)",
