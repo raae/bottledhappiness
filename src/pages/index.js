@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { Flex, Box, jsx } from "theme-ui"
-import { Spring, config } from "react-spring/renderprops"
+import { Flex, jsx } from "theme-ui"
 import useSound from "use-sound"
 import { Helmet } from "react-helmet"
 import laugh1 from "../assets/laughs/534709__artymarce__childlaugh.mp3"
@@ -37,44 +36,25 @@ export default function Home() {
       }}
     >
       <Helmet title="🍾🤣🍾" />
-      <Spring
-        from={{
-          transform: `translate(0px, 0px) rotate(0deg) scale(1)`,
+      <IllustrationSVG
+        onClick={laughingLillianOnClick}
+        sx={{
+          path: {
+            ":nth-child(3n)": {
+              fill: "red",
+            },
+            ":nth-child(4n)": {
+              fill: "blue",
+            },
+            ":nth-child(5n)": {
+              fill: "pink",
+            },
+            ":nth-child(8n)": {
+              fill: "yellow",
+            },
+          },
         }}
-        to={{
-          transform: `translate(${0}px, ${5}px) rotate(${0}deg) scale(${1})`,
-        }}
-        reset={true}
-        reverse={reverse}
-        config={config.molasses}
-        onRest={() => {
-          setReverse(current => !current)
-        }}
-      >
-        {props1 => (
-          <IllustrationSVG
-            onClick={laughingLillianOnClick}
-            sx={{
-              path: {
-                ":nth-child(3n)": {
-                  fill: "red",
-                },
-                ":nth-child(4n)": {
-                  fill: "blue",
-                  ...props1,
-                },
-                ":nth-child(5n)": {
-                  fill: "pink",
-                },
-                ":nth-child(8n)": {
-                  fill: "yellow",
-                },
-              },
-            }}
-          />
-        )}
-      </Spring>
-
+      />
       <Link sx={{ fontFamily: "body", p: 3, display: "block" }} to="about">
         About
       </Link>
