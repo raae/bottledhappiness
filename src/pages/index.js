@@ -23,23 +23,25 @@ export default function Home() {
   }
 
   return (
-    <Flex
-      bg=""
-      sx={{
-        height: "100vh",
-        width: "100vw",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
+    <>
       <Helmet title="🍾🤣🍾" />
 
-      <Illustration onClick={laughingLillianOnClick} />
+      <Flex
+        bg=""
+        sx={{
+          height: "100vh",
+          width: "100vw",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <Illustration onClick={laughingLillianOnClick} />
 
-      <Link sx={{ fontFamily: "body", p: 3, display: "block" }} to="about">
-        About
-      </Link>
-    </Flex>
+        <Link sx={{ fontFamily: "body", p: 3, display: "block" }} to="about">
+          About
+        </Link>
+      </Flex>
+    </>
   )
 }

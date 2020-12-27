@@ -9,6 +9,7 @@ const MarkdownTemplate = ({ data }) => {
   return (
     <>
       <Helmet title="🍾🤣🍾 - About" />
+
       <main
         sx={{
           maxWidth: 512,
