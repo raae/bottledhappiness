@@ -17,6 +17,7 @@ export default function Home() {
   const [reverse, setReverse] = useState(false)
 
   return (
+
     <Flex
       bg=""
       sx={{
@@ -27,6 +28,7 @@ export default function Home() {
         flexDirection: "column",
       }}
     >
+      <Helmet title="🍾🤣🍾" />
       <Spring
         from={{
           transform: `translate(0px, 0px) rotate(0deg) scale(1)`,
