@@ -2,6 +2,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { Flex, jsx } from "theme-ui"
+import { keyframes } from "@emotion/react"
 import useSound from "use-sound"
 import { Helmet } from "react-helmet"
 import laugh1 from "../assets/laughs/534709__artymarce__childlaugh.mp3"
@@ -22,7 +23,50 @@ export default function Home() {
     ourTopChildrenLaughs[random]()
   }
 
-  const [reverse, setReverse] = useState(false)
+  const wiggle1 = keyframes({
+    "0%": {
+      transform: "translate(0)",
+    },
+    "25%": {
+      transform: "translate(-1px)",
+    },
+    "75%": {
+      transform: "translate(1px)",
+    },
+    "100%": {
+      transform: "translate(0)",
+    },
+  })
+
+  const wiggle2 = keyframes({
+    "0%": {
+      transform: "translate(0)",
+    },
+    "25%": {
+      transform: "translate(-0.5px)",
+    },
+    "75%": {
+      transform: "translate(1px)",
+    },
+    "100%": {
+      transform: "translate(0)",
+    },
+  })
+
+  const wiggle3 = keyframes({
+    "0%": {
+      transform: "translate(0)",
+    },
+    "25%": {
+      transform: "translate(-0.5px, -0.5px)",
+    },
+    "75%": {
+      transform: "translate(1px, 0.5px)",
+    },
+    "100%": {
+      transform: "translate(0)",
+    },
+  })
 
   return (
     <Flex
@@ -43,29 +87,44 @@ export default function Home() {
             transform: "scale(1)",
             transition: ".2s linear all",
             fill: "grey",
+
+            ":not(:nth-child(3))": {
+              // Everything but the bottle
+              transformOrigin: "center",
+              animationTimingFunction: "linear",
+              animationIterationCount: "infinite",
+              animationDuration: "1s",
+              animationName: wiggle3.toString(),
+            },
             ":hover": {
               fill: "orange",
             },
             ":nth-child(3n)": {
               fill: "red",
+              animationDelay: "200ms",
+              animationName: wiggle1.toString(),
               ":hover": {
                 fill: "pink",
               },
             },
             ":nth-child(4n)": {
               fill: "purple",
+              animationDelay: "300ms",
+              animationName: wiggle2.toString(),
               ":hover": {
                 fill: "red",
               },
             },
             ":nth-child(5n)": {
               fill: "pink",
+              animationDelay: "400ms",
               ":hover": {
                 fill: "yellow",
               },
             },
             ":nth-child(8n)": {
               fill: "yellow",
+              animationDelay: "500ms",
               ":hover": {
                 fill: "pink",
               },
@@ -74,13 +133,13 @@ export default function Home() {
               fill: "green",
               stroke: "green",
               strokeWidth: "3px",
+              cursor: "pointer",
               ":hover": {
                 fill: "blue",
                 stroke: "blue",
                 strokeWidth: "5px",
               },
               ":active": {
-                stroke: "pink",
                 strokeWidth: "0",
               },
             },
