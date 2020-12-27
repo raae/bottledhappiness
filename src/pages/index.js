@@ -41,7 +41,7 @@ export default function Home() {
         sx={{
           path: {
             transform: "scale(1)",
-            transition: ".2s linear fill",
+            transition: ".2s linear all",
             fill: "grey",
             ":hover": {
               fill: "orange",
@@ -53,7 +53,7 @@ export default function Home() {
               },
             },
             ":nth-child(4n)": {
-              fill: "blue",
+              fill: "purple",
               ":hover": {
                 fill: "red",
               },
@@ -71,13 +71,18 @@ export default function Home() {
               },
             },
             ":nth-child(3)": {
-              // Bottle
-              // fill: "green",
-              // transform: "scale(1)",
-              // transition: ".2s linear fill",
-              // ":hover": {
-              //   fill: "red",
-              // },
+              fill: "green",
+              stroke: "green",
+              strokeWidth: "3px",
+              ":hover": {
+                fill: "blue",
+                stroke: "blue",
+                strokeWidth: "5px",
+              },
+              ":active": {
+                stroke: "pink",
+                strokeWidth: "0",
+              },
             },
           },
         }}
