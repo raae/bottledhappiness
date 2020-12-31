@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from "react"
 import { Link } from "gatsby"
-import { Flex, jsx } from "theme-ui"
+import { jsx } from "theme-ui"
 import useSound from "use-sound"
 import laugh1 from "../assets/laughs/534709__artymarce__childlaugh.mp3"
 import laugh2 from "../assets/laughs/Laugh2LillianBenedicte2020.mp3"
@@ -23,22 +23,30 @@ export default function Home() {
 
   return (
     <>
-      <Flex
-        bg=""
+      <main
         sx={{
           height: "100vh",
           width: "100vw",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
         }}
       >
         <Illustration onClick={laughingLillianOnClick} />
 
-        <Link sx={{ fontFamily: "body", p: 3, display: "block" }} to="about">
+        <Link
+          sx={{
+            position: "absolute",
+            bottom: 0,
+            right: 0,
+            backgroundColor: "background",
+            fontFamily: "body",
+            px: 3,
+            py: 2,
+            display: "block",
+          }}
+          to="about"
+        >
           About
         </Link>
-      </Flex>
+      </main>
     </>
   )
 }
