@@ -8,7 +8,6 @@ import laugh2 from "../assets/laughs/Laugh2LillianBenedicte2020.mp3"
 import laugh3 from "../assets/laughs/Laugh3LillianJUNE_30_2016_Trampolinelykke_paa_landet_hos_babywildelvs.mp3"
 
 import Illustration from "../components/Illustration"
-import Meta from "../components/Meta"
 
 export default function Home() {
   const [play1] = useSound(laugh1)
@@ -24,8 +23,6 @@ export default function Home() {
 
   return (
     <>
-      <Meta />
-
       <Flex
         bg=""
         sx={{
