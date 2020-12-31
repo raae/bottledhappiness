@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from "react"
 import { keyframes } from "@emotion/react"
-import { jsx } from "theme-ui"
+import { Button, jsx } from "theme-ui"
 import IllustrationSVG from "../assets/illustration.svg"
 
 const Illustration = props => {
@@ -51,84 +51,105 @@ const Illustration = props => {
   })
 
   return (
-    <IllustrationSVG
+    <Button
       {...props}
       sx={{
-        "#Bottle": {
-          transformOrigin: "center",
-          cursor: "pointer",
-
-          "#Background": {
-            transition: ".2s linear all",
-            fill: "transparent",
-            opacity: "0.5",
-          },
-
-          ":hover #Background": {
+        width: "100%",
+        height: "100%",
+        background: "transparent",
+        overflow: "hidden",
+        padding: 0,
+        ":focus": {
+          outline: 0,
+          "#Bottle #Background": {
             fill: "pink",
           },
-
-          "#Outline": {
-            fill: "green",
-            transition: ".2s ease-in-out all",
-            stroke: "green",
-            strokeWidth: "3px",
-          },
-
-          ":hover #Outline": {
+          "#Bottle #Outline": {
             strokeWidth: "5px",
           },
-
-          ":active #Outline": {
-            strokeWidth: "0px",
-          },
         },
-
-        "#Bubbles path": {
-          fill: "purple",
-          transformOrigin: "center",
-          animationTimingFunction: "linear",
-          animationIterationCount: "infinite",
-          animationDuration: "1s",
-          animationName: wiggle3.toString(),
-          transition: ".2s linear all",
-
-          ":hover": {
-            fill: "orange",
-          },
-          ":nth-child(3n)": {
-            fill: "red",
-            animationDelay: "200ms",
-            animationName: wiggle1.toString(),
-            ":hover": {
-              fill: "pink",
-            },
-          },
-          ":nth-child(4n)": {
-            fill: "grey",
-            animationDelay: "300ms",
-            animationName: wiggle2.toString(),
-            ":hover": {
-              fill: "red",
-            },
-          },
-          ":nth-child(5n)": {
-            fill: "pink",
-            animationDelay: "400ms",
-            ":hover": {
-              fill: "yellow",
-            },
-          },
-          ":nth-child(8n)": {
-            fill: "yellow",
-            animationDelay: "500ms",
-            ":hover": {
-              fill: "pink",
-            },
+        ":active": {
+          "#Bottle #Outline": {
+            strokeWidth: "0px !important",
           },
         },
       }}
-    />
+    >
+      <IllustrationSVG
+        sx={{
+          width: "100%",
+          height: "100%",
+          "#Bottle": {
+            cursor: "pointer",
+
+            "#Background": {
+              transition: ".2s linear all",
+              fill: "transparent",
+              opacity: "0.5",
+            },
+
+            ":hover #Background": {
+              fill: "pink",
+            },
+
+            "#Outline": {
+              fill: "green",
+              transition: ".2s ease-in-out all",
+              stroke: "green",
+              strokeWidth: "3px",
+            },
+
+            ":hover #Outline": {
+              strokeWidth: "5px",
+            },
+          },
+
+          "#Bubbles path": {
+            fill: "purple",
+            transformOrigin: "center",
+            animationTimingFunction: "linear",
+            animationIterationCount: "infinite",
+            animationDuration: "1s",
+            animationName: wiggle3.toString(),
+            transition: ".2s linear all",
+
+            ":hover": {
+              fill: "orange",
+            },
+            ":nth-child(3n)": {
+              fill: "red",
+              animationDelay: "200ms",
+              animationName: wiggle1.toString(),
+              ":hover": {
+                fill: "pink",
+              },
+            },
+            ":nth-child(4n)": {
+              fill: "grey",
+              animationDelay: "300ms",
+              animationName: wiggle2.toString(),
+              ":hover": {
+                fill: "red",
+              },
+            },
+            ":nth-child(5n)": {
+              fill: "pink",
+              animationDelay: "400ms",
+              ":hover": {
+                fill: "yellow",
+              },
+            },
+            ":nth-child(8n)": {
+              fill: "yellow",
+              animationDelay: "500ms",
+              ":hover": {
+                fill: "pink",
+              },
+            },
+          },
+        }}
+      />
+    </Button>
   )
 }
 
