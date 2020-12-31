@@ -6,7 +6,9 @@
 
 module.exports = {
   siteMetadata: {
-    title: `🍾 🤣 🍾`,
+    title: "Bottled Happiness 🍾🤣🍾",
+    description: "A Bottle of our Daughter's Laughter",
+    favEmojii: "🍾",
   },
   /* Your site config here */
   plugins: [
