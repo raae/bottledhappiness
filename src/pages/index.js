@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet"
 import laugh1 from "../assets/laughs/534709__artymarce__childlaugh.mp3"
 import laugh2 from "../assets/laughs/Laugh2LillianBenedicte2020.mp3"
 import laugh3 from "../assets/laughs/Laugh3LillianJUNE_30_2016_Trampolinelykke_paa_landet_hos_babywildelvs.mp3"
-
+import SEO from "../components/seo"
 import Illustration from "../components/Illustration"
 
 export default function Home() {
@@ -22,9 +22,10 @@ export default function Home() {
     ourTopChildrenLaughs[random]()
   }
 
+
   return (
     <>
-      <Helmet title="🍾🤣🍾" />
+      <SEO title="🍾🤣🍾" />
 
       <Flex
         bg=""

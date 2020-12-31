@@ -6,7 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    title: `🍾 🤣 🍾`,
+    title: `🍾 🤣 🍾 Bottled Laughter`,
+    description: `A Bottle of Laughter by or Daughter`,
+    author: `@raae`,
+    keywords: `Bottled Happiness`,
+    siteUrl: `https://bottledhappiness.app/`
+
   },
   /* Your site config here */
   plugins: [
