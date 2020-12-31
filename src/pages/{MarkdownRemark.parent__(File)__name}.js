@@ -2,14 +2,11 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { jsx, useThemeUI } from "theme-ui"
-import Meta from "../components/Meta"
 
 const MarkdownTemplate = ({ data }) => {
   const { theme } = useThemeUI()
   return (
     <>
-      <Meta />
-
       <main
         sx={{
           maxWidth: 512,
