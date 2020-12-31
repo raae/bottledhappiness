@@ -54,19 +54,45 @@ const Illustration = props => {
     <IllustrationSVG
       {...props}
       sx={{
-        path: {
-          transform: "scale(1)",
-          transition: ".2s linear all",
-          fill: "grey",
+        "#Bottle": {
+          transformOrigin: "center",
+          cursor: "pointer",
 
-          ":not(:nth-child(3))": {
-            // Everything but the bottle
-            transformOrigin: "center",
-            animationTimingFunction: "linear",
-            animationIterationCount: "infinite",
-            animationDuration: "1s",
-            animationName: wiggle3.toString(),
+          "#Background": {
+            transition: ".2s linear all",
+            fill: "transparent",
+            opacity: "0.5",
           },
+
+          ":hover #Background": {
+            fill: "pink",
+          },
+
+          "#Outline": {
+            fill: "green",
+            transition: ".2s ease-in-out all",
+            stroke: "green",
+            strokeWidth: "3px",
+          },
+
+          ":hover #Outline": {
+            strokeWidth: "5px",
+          },
+
+          ":active #Outline": {
+            strokeWidth: "0px",
+          },
+        },
+
+        "#Bubbles path": {
+          fill: "purple",
+          transformOrigin: "center",
+          animationTimingFunction: "linear",
+          animationIterationCount: "infinite",
+          animationDuration: "1s",
+          animationName: wiggle3.toString(),
+          transition: ".2s linear all",
+
           ":hover": {
             fill: "orange",
           },
@@ -79,7 +105,7 @@ const Illustration = props => {
             },
           },
           ":nth-child(4n)": {
-            fill: "purple",
+            fill: "grey",
             animationDelay: "300ms",
             animationName: wiggle2.toString(),
             ":hover": {
@@ -98,20 +124,6 @@ const Illustration = props => {
             animationDelay: "500ms",
             ":hover": {
               fill: "pink",
-            },
-          },
-          ":nth-child(3)": {
-            fill: "green",
-            stroke: "green",
-            strokeWidth: "3px",
-            cursor: "pointer",
-            ":hover": {
-              fill: "blue",
-              stroke: "blue",
-              strokeWidth: "5px",
-            },
-            ":active": {
-              strokeWidth: "0",
             },
           },
         },
