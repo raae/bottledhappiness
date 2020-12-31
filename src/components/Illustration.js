@@ -60,7 +60,9 @@ const Illustration = props => {
         overflow: "hidden",
         padding: 0,
         ":focus": {
-          outline: 0,
+          ":not(:focus-visible)": {
+            outline: 0,
+          },
           "#Bottle #Background": {
             fill: "pink",
           },
