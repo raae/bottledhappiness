@@ -9,6 +9,8 @@ module.exports = {
     title: "Bottled Happiness 🍾🤣🍾",
     description: "A Bottle of our Daughter's Laughter",
     favEmojii: "🍾",
+    url: "https://bottledhappiness.app", // No trailing slash allowed!
+    image: "/images/social.jpeg", // Path to your image you placed in the 'static' folder
   },
   /* Your site config here */
   plugins: [
