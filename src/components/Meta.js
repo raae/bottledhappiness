@@ -22,7 +22,7 @@ const Meta = () => {
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta lang={lang} />
+      <meta htmlAttributes={{lang,}} />
       <link rel="icon" href={favIcon} />
       <meta name="image" content={socialImage} />
 
