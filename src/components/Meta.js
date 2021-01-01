@@ -10,6 +10,7 @@ const Meta = () => {
     favEmojii,
     siteImage,
     siteUrl,
+    lang,
   } = site.siteMetadata
 
   const socialImage = `${siteUrl}${siteImage}`
@@ -21,6 +22,7 @@ const Meta = () => {
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta lang={lang} />
       <link rel="icon" href={favIcon} />
       <meta name="image" content={socialImage} />
 
@@ -45,6 +47,7 @@ const query = graphql`
         favEmojii
         siteUrl: url
         siteImage: image
+        lang
       }
     }
   }
