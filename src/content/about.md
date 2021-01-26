@@ -8,11 +8,11 @@ All work is done in the open, check out the [GitHub repo](https://github.com/raa
 
 ## Who are we?
 
-We are Lilly Labs, a family(web-shop).
+We are Lilly Labs, a family owned web-shop.
 
 - Benedicte ([@raae](https://twitter.com/raae)) is the mom and senior developer.
 - Ola ([@olaholstvea](https://twitter.com/olaholstvea)) is the dad and junior developer evangelist.
-- Lillian (5,5) is the Intern.
+- Lillian (6 🦄) is the Intern.
 
 We work as independent contractors and indie hackers.
 

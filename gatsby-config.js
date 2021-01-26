@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Bottled Happiness 🍾🤣🍾",
@@ -47,7 +51,21 @@ module.exports = {
               },
             },
           },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
         ],
+      },
+    },
+    {
+      resolve: `@raae/gatsby-plugin-fathom`,
+      options: {
+        site: process.env.FATHOM_SITE,
+        spa: "auto",
+        includedDomains: process.env.FATHOM_INCLUDED_DOMAINS,
       },
     },
   ],
